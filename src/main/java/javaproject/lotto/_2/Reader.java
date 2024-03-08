@@ -9,7 +9,7 @@ public class Reader {
     public static final int MIN_COUNT = 1;
     public static final int MAX_COUNT = 1000;
 
-    public int buy() throws IOException {
+    public int input() throws IOException {
         System.out.print("로또를 몇장 구매하시겠습니까? (최대 5장 구매)\t");
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -8,7 +8,7 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
         Reader reader = new Reader();
-        int buyTicketCount = reader.buy();
+        int buyTicketCount = reader.input();
 
         Lotto lotto = new Lotto(buyTicketCount);
         List<Set<Integer>> lottoTickets = lotto.logic();
