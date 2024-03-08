@@ -1,4 +1,4 @@
-package javaproject.lotto;
+package javaproject.lotto._1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +10,9 @@ import java.util.Set;
 public class LottoClient {
 
     public static final Random random = new Random();
+
+    public static final int MIN_COUNT = 1;
+    public static final int MAX_COUNT = 5;
 
     public static void main(String[] args) throws IOException {
         System.out.print("로또를 몇장 구매하시겠습니까? (최대 5장 구매)\t");
@@ -24,7 +27,7 @@ public class LottoClient {
         }
 
         int lottoTicketCount = Integer.parseInt(inputValue);
-        if (lottoTicketCount <= 0 || lottoTicketCount > 5) {
+        if (lottoTicketCount < MIN_COUNT || lottoTicketCount > MAX_COUNT) {
             throw new IllegalArgumentException("1인 최대 5장까지만 구매 가능합니다.");
         }
 
@@ -48,5 +51,4 @@ public class LottoClient {
             System.out.println();
         }
     }
-
 }
