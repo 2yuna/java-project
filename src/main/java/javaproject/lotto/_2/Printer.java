@@ -5,18 +5,18 @@ import java.util.Set;
 
 public class Printer {
 
-    private List<Set<Integer>> intCollectionArr;
+    private List<Set<Integer>> numberSetList;
 
     public static final int MAX_PRINT = 10;
 
-    public Printer(List<Set<Integer>> intCollectionArr) {
-        this.intCollectionArr = intCollectionArr;
+    public Printer(List<Set<Integer>> numberSetList) {
+        this.numberSetList = numberSetList;
     }
 
     public void print() {
-        for (Set<Integer> printIntCollection : colander()) {
-            for (Integer printInt : printIntCollection) {
-                System.out.print(printInt + "\t");
+        for (Set<Integer> printNumberSet : colander()) {
+            for (Integer printNumber : printNumberSet) {
+                System.out.print(printNumber + "\t");
             }
             System.out.println();
         }
@@ -25,14 +25,14 @@ public class Printer {
     }
 
     private boolean isExceed() {
-        return intCollectionArr.size() > MAX_PRINT ? true : false;
+        return numberSetList.size() > MAX_PRINT ? true : false;
     }
 
     private List<Set<Integer>> colander() {
         if (isExceed()) {
-            return intCollectionArr.subList(0, MAX_PRINT + 1);
+            return numberSetList.subList(0, MAX_PRINT + 1);
         }
-        return intCollectionArr;
+        return numberSetList;
     }
 
     private void printDot() {
