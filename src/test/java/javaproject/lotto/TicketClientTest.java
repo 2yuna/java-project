@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.IOException;
 
-class LottoClientTest {
+class TicketClientTest {
 
     @ParameterizedTest
     @ValueSource(ints = {0, 6, 7})

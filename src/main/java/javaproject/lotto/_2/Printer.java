@@ -1,22 +1,21 @@
 package javaproject.lotto._2;
 
 import java.util.List;
-import java.util.Set;
 
 public class Printer {
 
-    private List<Set<Integer>> numberSetList;
+    private List<Lotto> lottos;
 
     public static final int MAX_PRINT = 10;
 
-    public Printer(List<Set<Integer>> numberSetList) {
-        this.numberSetList = numberSetList;
+    public Printer(List<Lotto> lottos) {
+        this.lottos = lottos;
     }
 
     public void print() {
-        for (Set<Integer> printNumberSet : colander()) {
-            for (Integer printNumber : printNumberSet) {
-                System.out.print(printNumber + "\t");
+        for (Lotto lotto : colander()) {
+            for (Integer lottoNumber : lotto.toSet()) {
+                System.out.print(lottoNumber + "\t");
             }
             System.out.println();
         }
@@ -25,14 +24,14 @@ public class Printer {
     }
 
     private boolean isExceed() {
-        return numberSetList.size() > MAX_PRINT ? true : false;
+        return lottos.size() > MAX_PRINT ? true : false;
     }
 
-    private List<Set<Integer>> colander() {
+    private List<Lotto> colander() {
         if (isExceed()) {
-            return numberSetList.subList(0, MAX_PRINT + 1);
+            return lottos.subList(0, MAX_PRINT + 1);
         }
-        return numberSetList;
+        return lottos;
     }
 
     private void printDot() {
