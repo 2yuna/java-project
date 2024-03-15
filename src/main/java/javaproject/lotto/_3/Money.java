@@ -1,4 +1,4 @@
-package javaproject.lotto._2;
+package javaproject.lotto._3;
 
 import java.text.DecimalFormat;
 

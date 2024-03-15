@@ -1,4 +1,4 @@
-package javaproject.lotto._2;
+package javaproject.lotto._3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,18 +14,23 @@ public class Reader {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String inputString = br.readLine();
+
         validate(inputString);
+
         return Integer.parseInt(inputString);
     }
+
     private void validate(String inputString) {
         validateNullOrEmpty(inputString);
         validateRange(inputString);
     }
+
     private void validateNullOrEmpty(String inputString) {
         if (inputString == null || inputString.isEmpty()) {
             throw new IllegalArgumentException();
         }
     }
+
     private void validateRange(String inputString) {
         int lottoTicketCount = Integer.parseInt(inputString);
         if (lottoTicketCount < MIN_COUNT || lottoTicketCount > MAX_COUNT) {

@@ -1,8 +1,8 @@
 package javaproject.lotto._2;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Client {
 
@@ -10,19 +10,15 @@ public class Client {
         Reader reader = new Reader();
         int buyTicketCount = reader.input();
 
-        List<Lotto> lottos = new ArrayList<>();
-        for (int i = 0; i < buyTicketCount; i++) {
-            lottos.add(Lotto.create());
-        }
+        Lotto lotto = new Lotto(buyTicketCount);
+        List<Set<Integer>> lottoTickets = lotto.logic();
 
-        Printer printer = new Printer(lottos);
+        Printer printer = new Printer(lottoTickets);
         printer.print();
 
-        Statistic statistic = Statistic.calculate(lottos);
+        Statistic statistic = Statistic.toFlatMap(lottoTickets);
+        statistic.frequency();
         statistic.sort();
         statistic.print();
-
-        Result result = new Result(lottos);
-        result.print();
     }
 }

@@ -1,6 +1,6 @@
-package javaproject.lotto._2;
+package javaproject.lotto._3;
 
-import javaproject.lotto._2.constant.Reward;
+import javaproject.lotto._3.constant.Reward;
 
 import java.util.*;
 

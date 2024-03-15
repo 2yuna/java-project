@@ -1,4 +1,4 @@
-package javaproject.lotto._2.constant;
+package javaproject.lotto._3.constant;
 
 import java.util.Arrays;
 import java.util.Objects;
