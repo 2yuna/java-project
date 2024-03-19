@@ -19,7 +19,6 @@ public class LottoController {
     @PostMapping
     public ResponseEntity buy(@RequestBody Ticket ticket) {
         List<Lotto> lottos = lottoService.buy(ticket);
-        System.out.println(lottos);
         return ResponseEntity.ok(lottos);
     }
 }
