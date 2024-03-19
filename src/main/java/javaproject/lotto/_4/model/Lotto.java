@@ -1,4 +1,4 @@
-package javaproject.lotto._3;
+package javaproject.lotto._4.model;
 
 import java.util.HashSet;
 import java.util.Random;
@@ -46,4 +46,5 @@ public class Lotto {
     public String toString() {
         return numbers + "";
     }
+
 }
