@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/Documents/workspace/study/jpa/database/lotto
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 1000
+    hibernate:
+      ddl-auto: none
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+logging:
+  level:
+    org.hibernate.sql: debug
+    org.hibernate.type: trace
